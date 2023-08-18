@@ -1,0 +1,11 @@
+.search-class em{
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+
+.search-class .search-bar {
+	padding: 0.422rem 1.875rem;
+    width: 350px;
+
+}
