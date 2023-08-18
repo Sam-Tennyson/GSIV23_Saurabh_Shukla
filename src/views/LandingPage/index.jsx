@@ -39,7 +39,7 @@ const LandingPage = () => {
     const fetchMovie = async () => {
 
         let query = encodeURI(search)
-        let endpoint = search?.length ?"search/movie" :"movie/upcoming"
+        let endpoint = search?.length ? "search/movie" : "movie/upcoming"
 
         // API Endpoint
         let API_ENDPOINTS = `${import.meta.env.VITE_API_BASE_URL}/${endpoint}?api_key=${import.meta.env.VITE_API_API_KEY}&query=${query}&page=${pageRef.current}`
@@ -88,7 +88,7 @@ const LandingPage = () => {
                 </div>
 
                 {/* Pagination */}
-                {totalPageRed ? (
+                {!search?.length  && totalPageRed ? (
                     <>
                         <CommonPagination
                             pagecount={totalPageRed}
